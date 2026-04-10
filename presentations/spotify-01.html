@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
 <meta name="viewport" content="width=device-width">
-<meta name="theme-color" content="#18d85f">
+<meta name="theme-color" content="#000000">
 <link rel="icon" href="https://teacherchriser.github.io/images/me.gif" type="image/x-icon">
 <title>Spotify 01</title>
 
@@ -11,7 +11,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #B6CCBC, #000000);
+    background: linear-gradient(to bottom, #700000, #000000);
     color: white;
     display: flex;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
 
 .small-text {
     font-size: 12px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .song-title {
@@ -80,7 +80,7 @@ button {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    font-size: 24px;
+    font-size: 26px;
 }
 </style>
 </head>
@@ -90,7 +90,7 @@ button {
 <div class="player">
 
     <div class="small-text">Playing from album</div>
-    <div class="small-text">Sounds of the World - CAI2</div>
+    <div class="small-text" style="font-weight: bold;">Sounds of the World - CAI2</div>
 
     <img src="https://i.scdn.co/image/ab67616d00001e02fd203cdfa9b119c70ee6c159" class="album">
 
@@ -115,9 +115,9 @@ button {
 
     <div class="controls">
 	<audio id="audio" src="https://learnenglish.britishcouncil.org/sites/podcasts/files/podcast/elementary-podcasts-s01-e01.mp3" preload="auto"  ></audio>
-        <button>⏮</button>
+        <button>◼</button>
         <button class="play" id="play">▶</button>
-        <button id="stop">⏸</button>
+        <button id="stop">❚❚</button>
     </div>
 
 </div>
