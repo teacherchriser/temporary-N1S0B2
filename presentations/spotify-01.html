@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#18d85f">
+<link rel="icon" href="https://teacherchriser.github.io/images/me.gif" type="image/x-icon">
+<title>Spotify 01</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #B6CCBC, #000000);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.player {
+    width: 320px;
+    padding: 20px;
+    text-align: center;
+}
+
+.album {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.small-text {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.song-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.artist {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.progress-container {
+    margin: 15px 0;
+}
+
+.progress {
+    width: 100%;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.play {
+    background: #1db954;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="player">
+
+    <div class="small-text">Playing from album</div>
+    <div class="small-text">Sounds of the World - CAI2</div>
+
+    <img src="https://i.scdn.co/image/ab67616d00001e02fd203cdfa9b119c70ee6c159" class="album">
+
+    <div class="song-title">China & Singapore</div>
+    <div class="artist">Lorena Sanchez - CAI2</div>
+
+    <div class="progress-container">
+        <input type="range" class="progress" value="40">
+        <div class="time">
+            <span>1:26</span>
+            <span>1:57</span>
+        </div>
+    </div>
+	
+	<!-- 
+	<div>
+		<audio id="audio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto"  ></audio>
+		<button id="play">Play</button>
+		<button id="stop">Stop</button>
+	</div>
+	-->
+
+    <div class="controls">
+	<audio id="audio" src="https://learnenglish.britishcouncil.org/sites/podcasts/files/podcast/elementary-podcasts-s01-e01.mp3" preload="auto"  ></audio>
+        <button>⏮</button>
+        <button class="play" id="play">▶</button>
+        <button id="stop">⏸</button>
+    </div>
+
+</div>
+
+<script>
+var playBtn = document.getElementById('play');
+var stopBtn = document.getElementById('stop');
+
+var playSound = function() {
+	audio.play();
+};
+
+playBtn.addEventListener('click', playSound, false);
+stopBtn.addEventListener('click', function(){audio.pause()}, false);
+</script>
+
+</body>
+</html>
