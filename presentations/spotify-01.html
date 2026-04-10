@@ -7,6 +7,8 @@
 <link rel="icon" href="https://teacherchriser.github.io/images/me.gif" type="image/x-icon">
 <title>Spotify 01</title>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <style>
 body {
     margin: 0;
@@ -104,20 +106,13 @@ button {
             <span>1:57</span>
         </div>
     </div>
-	
-	<!-- 
-	<div>
-		<audio id="audio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto"  ></audio>
-		<button id="play">Play</button>
-		<button id="stop">Stop</button>
-	</div>
-	-->
+
 
     <div class="controls">
 	<audio id="audio" src="https://learnenglish.britishcouncil.org/sites/podcasts/files/podcast/elementary-podcasts-s01-e01.mp3" preload="auto"  ></audio>
-        <button>◼</button>
-        <button class="play" id="play">▶</button>
-        <button id="stop">❚❚</button>
+        <button id="refresh"><i class="fa-solid fa-stop" style="font-size: 25px;"></i></button>
+        <button id="play"><i class="fa-solid fa-circle-play" style="font-size: 60px;"></i></button>
+        <button id="stop"><i class="fa-solid fa-pause" style="font-size: 25px;"></i></button>
     </div>
 
 </div>
@@ -125,13 +120,19 @@ button {
 <script>
 var playBtn = document.getElementById('play');
 var stopBtn = document.getElementById('stop');
+var refreshBtn = document.getElementById('refresh'); // botón nuevo
 
 var playSound = function() {
 	audio.play();
 };
 
+var refreshPage = function() {
+	location.reload(); // recarga la página
+};
+
 playBtn.addEventListener('click', playSound, false);
-stopBtn.addEventListener('click', function(){audio.pause()}, false);
+stopBtn.addEventListener('click', function(){ audio.pause(); }, false);
+refreshBtn.addEventListener('click', refreshPage, false);
 </script>
 
 </body>
