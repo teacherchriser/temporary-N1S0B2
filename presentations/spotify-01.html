@@ -168,5 +168,12 @@ stopBtn.addEventListener('click', function(){ audio.pause(); }, false);
 refreshBtn.addEventListener('click', refreshPage, false);
 </script>
 
+<!-- DISABLE RIGHT CLICK -->
+<script> 
+document.oncontextmenu = function() { 
+    return false; 
+};
+</script>
+
 </body>
 </html>
