@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" href="https://teacherchriser.github.io/images/me.gif" type="image/x-icon">
+<title>PCS Karaoke</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    font-family: "Staatliches", sans-serif;
+    background: black;
+}
+
+.gallery {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(50%);
+}
+
+/* animación base */
+@keyframes fade {
+    0%   { opacity: 0; }
+    10%  { opacity: 1; }
+    30%  { opacity: 1; }
+    40%  { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Texto */
+.text-box {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    color: #ffffff;
+}
+
+.text-box p {
+    margin: 5px 0;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* QR */
+.qr {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 120px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="gallery" id="gallery">
+
+    <!-- Puedes agregar TODAS las imágenes que quieras -->
+    
+    <div class="slide"><img src="https://i.ytimg.com/vi/kknKs7cAcO8/maxresdefault.jpg"></div>
+    <div class="slide"><img src="https://pbs.twimg.com/media/EY-P_S7XQAIimDf.jpg"></div>
+    <div class="slide"><img src="https://pbs.twimg.com/media/EY-SPunU0AE4pwc.jpg"></div>
+	<div class="slide"><img src="https://i.ytimg.com/vi/Mr8WdX4m3q4/maxresdefault.jpg"></div>
+
+    <!-- TEXTO -->
+    <div class="text-box">
+        <p style="font-size: 50px; line-height: 40px; color: #FFFFFF;">Singing:</p><p style="font-size: 50px; line-height: 40px; color: #d0aac0;">Daniela Rincon</p>
+        <p style="font-size: 50px; line-height: 55px; color: #FFFFFF;">Song:</p><p style="font-size: 80px; line-height: 50px; color: #d0aac0;">Play Date</p>
+        <p style="font-size: 50px; line-height: 60px; color: #FFFFFF;">Author:</p><p style="font-size: 50px; line-height: 20px; color: #d0aac0;">Melanie Martinez</p>
+    </div>
+
+    <!-- QR 
+    <img src="https://www.researchgate.net/profile/Vinod-Shukla/publication/340398294/figure/fig3/AS:876175308103681@1585907880294/Sample-Figure-of-QR-Code-QR-code-works-in-a-simple-way-It-all-starts-of-by-feeding-in_Q320.jpg" class="qr">
+	-->
+</div>
+
+<audio id="bg-audio" autoplay>
+    <source src="Playdate.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* 🔥 CONFIGURACIÓN */
+const tiempoPorSlide = 8; // segundos por imagen (CAMBIA ESTO)
+
+const slides = document.querySelectorAll(".slide");
+const totalSlides = slides.length;
+const duracionTotal = tiempoPorSlide * totalSlides;
+
+/* Aplicar animación dinámica */
+slides.forEach((slide, index) => {
+    slide.style.animation = `fade ${duracionTotal}s infinite`;
+    slide.style.animationDelay = `${index * tiempoPorSlide}s`;
+});
+
+/* Activar audio con interacción */
+document.addEventListener("click", function() {
+    document.getElementById("bg-audio").play();
+});
+</script>
+
+</body>
+</html>
