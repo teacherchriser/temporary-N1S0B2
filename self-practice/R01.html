@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="https://teacherchriser.github.io/images/me.gif" type="image/x-icon">
+<title>PCS English Corner</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Play", sans-serif;
+    background-color: #FFFFFF;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* ===== BANNER ===== */
+.banner {
+    position: relative;
+    height: 100px;
+    background: url('https://img.andrewprokos.com/BOSTON-SKYLINE-PANORAMA-LONG-EXPOSURE-4872-1200PX.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #1C1C1C;
+}
+
+/* Overlay oscuro */
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+/* Contenedor del texto (IMPORTANTE) */
+.banner-text {
+    position: relative;
+    z-index: 2; /* encima del overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Título */
+.banner h1 {
+    color: white;
+    font-size: 27px;
+    margin: 0;
+}
+
+/* Subtítulo */
+.subtitle {
+    font-size: 10px;
+    color: yellow;
+    margin: 0px 0 0 0;
+}
+
+/* ===== GRID ===== */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3px;
+    padding: 2px;
+	background: #1C1C1C;
+}
+
+/* ===== CARD ===== */
+.card {
+    border-radius: 0px;
+    overflow: hidden;
+}
+
+/* HEADER CON IMAGEN */
+.card-header {
+    position: relative;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+}
+
+.card-header h2 {
+    position: relative;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    padding: 0 5px;
+}
+
+/* CONTENIDO */
+.card-content {
+    background: #FFFBED;
+    padding: 15px;
+    line-height: 1.0;
+}
+
+.card-content ul {
+    padding-left: 18px;
+    margin: 0;
+}
+
+.card-content a {
+    color: #001c7d;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.card-content a:hover {
+    text-decoration: underline;
+}
+#extra {
+    background: #FFFBED;
+    color: #1C1C1C;
+    text-align: left;
+    padding: 5px;
+    font-size: 12px;
+    border: 2px solid #1C1C1C;
+}
+
+/* estilo base del link */
+#extra a {
+    color: #A10000;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* hover como en cards */
+#extra a:hover {
+    text-decoration: underline;
+    color: #000;
+}
+
+/* FOOTER */
+footer {
+    background: gold;
+    color: 1C1C1C;
+    text-align: center;
+    padding: 5px;
+    font-size: 12px;
+	border: 2px solid #1C1C1C;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- BANNER -->
+<div class="banner">
+    <div class="banner-text">
+        <h1>Professor Christian's Recommended Websites</h1>
+        <p class="subtitle">(Para tu práctica autónoma en el mejoramiento del idioma Inglés)</p>
+    </div>
+</div>
+
+    <!-- GRID 4 COLUMNAS -->
+    <div class="grid">
+
+        <!-- CARD 1 -->
+        <div class="card">
+            <div class="card-header" style="background-image:url('https://img.freepik.com/foto-gratis/enlazar-juntos_1418-90.jpg');">
+                <h2>Grammar</h2>
+            </div>
+            <div class="card-content">
+                <ul style="line-height">
+                    <li><a href="https://agendaweb.org/grammar-exercises.html" target="_blank">Agenda Web</a></li>
+                    <li><a href="https://elt.oup.com/student/englishfile/?cc=co&selLanguage=es" target="_blank">English File OUP</a></li>
+                    <li><a href="https://online.flipbuilder.com/rlsowa/gvrb/mobile/index.html#p=20" target="_blank">Grammar In Use</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card">
+            <div class="card-header" style="background-image:url('https://img.freepik.com/free-photo/female-with-headphones-listening-music_23-2148542161.jpg');">
+                <h2>Listening</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="https://www.elllo.org/" target="_blank">ELLLO</a></li>
+                    <li><a href="https://www.esl-lab.com/" target="_blank">Randall's Cafe</a></li>
+                    <li><a href="https://learnenglish.britishcouncil.org/free-resources/listening" target="_blank">British Council</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card">
+            <div class="card-header" style="background-image:url('https://img.freepik.com/foto-gratis/hermosa-joven-asiatica-portriat-concepto-estilo-vida-mujer-feliz_1150-9025.jpg');">
+                <h2>Reading</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="https://test-english.com/reading/" target="_blank">Test English</a></li>
+                    <li><a href="esl-lounge.com/student/reading.php" target="_blank">ESL Lounge</a></li>
+                    <li><a href="https://www.ellibrototal.com/ltotal/" target="_blank">El Libro Total</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="card">
+            <div class="card-header" style="background-image:url('https://img.freepik.com/free-photo/dictionary-definition-word_93675-129132.jpg');">
+                <h2>Vocabulary</h2>
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li><a href="https://www.wordreference.com/" target="_blank">Wordreference</a></li>
+                    <li><a href="https://www.visualdictionaryonline.com/" target="_blank">Visual Dictionary</a></li>
+                    <li><a href="https://howjsay.com/" target="_blank">Pronunciation Dict.</a></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+	
+	<!-- EXTRA -->
+    <div id="extra">
+        <ul>
+            <li>Recommended Youtube Channel: <a href="https://www.youtube.com/@EngVid" target="_blank"> EngVid</a></li>
+            <li>Pronunciation Practice: <a href="https://elsaspeak.com/en/learn-english/how-to-pronounce" target="_blank"> Elsa Speak</a></li>
+			<li>Institutional Resources: <a href="https://biblioteca.upn.edu.co/bases-de-datos/" target="_blank"> UPN Library Database</a></li>
+        </ul>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <marquee direction="left" scrollamount="5" behavior=" none" style="height: 20px; margin-top: 5px;">“Tell me and I forget, teach me and I may remember, involve me and I learn.” — Benjamin Franklin  |   This tool has been created and developed by Teacher Christian Serrano © 2026 - All Rights Reserved</marquee>
+    </footer>
+
+</div>
+
+</body>
+</html>
