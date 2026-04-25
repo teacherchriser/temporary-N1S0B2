@@ -59,6 +59,14 @@
     font-size: 10px;
     color: #555;
   }
+  main {
+      max-width: 700px;
+      margin: 30px auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
 
 </style>
 </head>
@@ -76,21 +84,55 @@
     </p>
     
     <p style="font-weight: 500; color: #001c7d; margin: 0; font-size: 9px;">
-      A social media site to share knowledge
+      An open forum site to share knowledge
     </p>
 
   </div>
 </header>
 
-<!-- VIVA ENGAGE (tal cual) -->
-<iframe 
-  src="https://www.kialo-edu.com/p/5ac67469-0dce-4cf5-abd2-a7013390fce2/663339">
-</iframe>
+<!-- DISQUS CODE -->
+<main>
+  <h2>How to keep learning English on your own?</h2>
+  <p>Join the discussion below and share your ideas.</p>
 
-<!-- FOOTER -->
-<footer>
-  <p style="font-weight: 500;">Created by Teacher Christian Serrano - Educational Use Only</p>
-</footer>
+  <div id="disqus_thread"></div>
+</main>
+
+<script>
+var disqus_config = function () {
+  this.page.url = "https://teacherchriser.github.io/tools/forums/disqus-01.html";
+  this.page.identifier = "how_to_keep_learning_english_on_your_own";
+};
+
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://discusslifestyle.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+
+(function() {
+  var d = document, s = d.createElement('script');
+  s.src = 'https://teacherchriser.disqus.com/embed.js';
+  s.setAttribute('data-timestamp', +new Date());
+  (d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the comments.</noscript>
+
+<div id="disqus_thread"></div>
+
+<script>
+
+</script>
+
+<noscript>
+  Please enable JavaScript to view the 
+  <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+</noscript>
+
+<script id="dsq-count-scr" src="//teacherchriser.disqus.com/count.js" async></script>
 
 <!-- DISABLE RIGHT CLICK -->
 <script> 
